@@ -114,8 +114,8 @@ macro(_generate_module_pybindings ARG_PKG ARG_GEN_OUTPUT_DIR ARG_GENERATED_FILES
     )
 
   list(APPEND ALL_GEN_OUTPUT_FILES_pybindings ${GEN_OUTPUT_FILE})
+
   # rule to put __init__.py into build dir
-  file(MAKE_DIRECTORY lib/${ARG_PKG})
   file(COPY ${GENPYBINDINGS_TEMPLATE_DIR}/__init__.py
     DESTINATION lib/${ARG_PKG}
     )
