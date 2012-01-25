@@ -11,6 +11,3 @@ Catkin-CopyrightType:  willowgarage
 Catkin-ROS-Message-Generator: pybindings
 Catkin-DebRulesType: cmake
 
-Release-Pull: git://github.com/wg-debs/genpybindings.git
-Release-Push: git@github.com:wg-debs/genpybindings.git
-

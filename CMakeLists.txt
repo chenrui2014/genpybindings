@@ -11,6 +11,7 @@ catkin_project(genpybindings
   )
 
 file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/genpybindings "Boost.Python bindings to C++")
+install(FILES stack.yaml DESTINATION share/${PROJECT_NAME})
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/genpybindings
   DESTINATION etc/langs
   )
