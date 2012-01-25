@@ -23,7 +23,7 @@ else()
   find_program_required(GENPYBINDINGS_BIN gen_pybindings.py
     PATHS @CMAKE_INSTALL_PREFIX@/share/genpybindings/bin
     )
-  set(GENPYBINDINGS_TEMPLATE_DIR ${CMAKE_INSTALL_PREFIX}/share/genpybindings)
+  set(GENPYBINDINGS_TEMPLATE_DIR @CMAKE_INSTALL_PREFIX@/share/genpybindings)
 endif()
 
 # Generate .cpp
