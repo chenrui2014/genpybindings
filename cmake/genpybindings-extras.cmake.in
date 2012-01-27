@@ -142,6 +142,10 @@ macro(_generate_module_pybindings ARG_PKG ARG_GEN_OUTPUT_DIR ARG_GENERATED_FILES
       ${Boost_INCLUDE_DIRS} ${PYTHON_INCLUDE_PATH} ${CMAKE_BINARY_DIR}/gen/cpp)
 
     add_library(${boost_lib_target} SHARED ${ARG_GENERATED_FILES} ${GEN_OUTPUT_FILE})
+    # Add a dependency between compiling the generated code, and the
+    # generation of the code.  Without this depenendency, you can have
+    # failed parallel builds.
+    add_dependencies(${boost_lib_target} ${ARG_PKG}_genpybindings)
     set_target_properties(${boost_lib_target} PROPERTIES
       PREFIX \"\"
       OUTPUT_NAME msg
