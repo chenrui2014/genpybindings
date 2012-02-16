@@ -5,10 +5,10 @@ find_package(catkin)
 
 add_subdirectory(scripts)
 
+catkin_stack()
 catkin_project(genpybindings
-  VERSION 0.0.0
   CFG_EXTRAS genpybindings-extras.cmake
-  )
+)
 
 file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/genpybindings "Boost.Python bindings to C++")
 install(FILES stack.yaml DESTINATION share/${PROJECT_NAME})
